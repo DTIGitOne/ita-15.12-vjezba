@@ -306,7 +306,41 @@ let emailBox = document.createElement("div");
 emailBox.className = "emailBox";
 rightBigBoxFlex.append(emailBox);
 
-for (i=0 ; i<=19 ; i++) {
+for (i=1 ; i<=19 ; i++) {
    let mail = document.createElement("div");
    mail.className = "mail";
+   emailBox.append(mail);
+
+   if (mail) {
+      let mailLeftCheck1 = document.createElement("img");
+      mailLeftCheck1.setAttribute('src' , '../slike/FavoriteMail2.PNG');
+      mailLeftCheck1.className = "mailLeftCheck1";
+      mail.append(mailLeftCheck1);
+
+      let mailLeftCheck2 = document.createElement("img");
+      mailLeftCheck2.setAttribute('src' , '../slike/FavoriteMail.PNG');
+      mailLeftCheck2.className = "mailLeftCheck2";
+      mail.append(mailLeftCheck2);
+
+      let mailName = document.createElement("div");
+      mailName.className = "mailName";
+      mailName.innerHTML = "ITAcademy";
+      mail.append(mailName);
+
+      let mailInfo = document.createElement("div");
+      mailInfo.className = "mailInfo";
+      mailInfo.innerHTML = "BESPLATAN SEMINAR: „Upoznajte GIT – najpopularniji alat za verzioniranje koda” ";
+      mail.append(mailInfo);
+
+      let mailInfo2 = document.createElement("div");
+      mailInfo2.className = "mailInfo2";
+      mailInfo2.innerHTML = "-Steknite nove vještine na besplatnom seminaru „Upoznajte GIT – najpopularniji alat za verzioniranje koda”";
+      mail.append(mailInfo2);
+
+      let mailDate = document.createElement("div");
+      mailDate.className = "mailDate";
+      mailDate.innerHTML = "Dec 17";
+      mail.append(mailDate);
+   }
 }
+

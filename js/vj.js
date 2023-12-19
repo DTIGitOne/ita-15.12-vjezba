@@ -18,7 +18,7 @@ let sideBarButton = document.createElement("img");
 sideBarButton.setAttribute('src' , '../slike/Capture.png');
 sideBarButton.className = "sideBarButton";
 leftTop1.append(sideBarButton);
-//da li je uredi korisiti ovako img = setAttribute
+//da li je uredu korisiti ovako img = setAttribute
 let gmailLogo = document.createElement("img");
 gmailLogo.setAttribute('src' , '../slike/gmailLogo.png');
 gmailLogo.className = "gmailLogo";
@@ -305,7 +305,7 @@ SocialFlex.append(SocialText);
 let emailBox = document.createElement("div");
 emailBox.className = "emailBox";
 rightBigBoxFlex.append(emailBox);
-
+/*
 for (i=1 ; i<=19 ; i++) {
    let mail = document.createElement("div");
    mail.className = "mail";
@@ -343,4 +343,111 @@ for (i=1 ; i<=19 ; i++) {
       mail.append(mailDate);
    }
 }
+*/
+sideBarButton.onmouseover = function() {
+   sideBarButton.className = "sideBarButtonHover";
+}
+sideBarButton.onmouseleave = function() {
+   sideBarButton.className = "sideBarButton";
+}
 
+composeBox.onmouseover = function() {
+   composeBox.className = "composeBoxHover";
+}
+
+composeBox.onmouseleave = function() {
+   composeBox.className = "composeBox";
+}
+/*
+InboxBox.onmouseover = function() {
+   InboxBox.className = "InboxBoxHover";
+   inboxBoxLogo.remove()
+   let inboxBoxLogoHover = document.createElement("img");
+   inboxBoxLogoHover.setAttribute('src' , '../slike/InboxHover.PNG');
+   inboxBoxLogoHover.className = "inboxBoxLogoHover";
+   InboxBox.prepend(inboxBoxLogoHover);
+
+   InboxBox.onmouseleave = function() {
+      InboxBox.className = "InboxBox";
+      inboxBoxLogoHover.remove()
+      let inboxBoxLogo = document.createElement("img");
+      inboxBoxLogo.setAttribute('src' , '../slike/InboxCapture1.PNG');
+      inboxBoxLogo.className = "InboxBoxLogo";
+      InboxBox.prepend(inboxBoxLogo);
+   }
+}
+*/
+
+let inboxBoxLogoHover = document.createElement("img");
+
+InboxBox.onmouseover = function() {
+   InboxBox.className = "InboxBoxHover";
+   inboxBoxLogo.remove();
+   for (let a=0 ; a < 1 ; a++) {
+      inboxBoxLogoHover.setAttribute('src' , '../slike/InboxHover.PNG');
+      inboxBoxLogoHover.className = "inboxBoxLogoHover";
+      InboxBox.prepend(inboxBoxLogoHover);
+   }
+   
+}
+
+InboxBox.onmouseleave = function() {
+   InboxBox.className = "InboxBox";
+   for (let a=0 ; a<1 ; a++) {
+      inboxBoxLogoHover.remove();
+      let inboxBoxLogo = document.createElement("img");
+      inboxBoxLogo.setAttribute('src' , '../slike/InboxCapture1.PNG');
+      inboxBoxLogo.className = "InboxBoxLogo";
+      InboxBox.prepend(inboxBoxLogo);
+   }
+   
+}
+
+InboxBox.onclick = function() {
+   InboxBox.className = "InboxBoxSelect";
+   InboxBoxText.className = "InboxBoxTextHover";
+   InboxBoxCount.className = "InboxBoxCountHover";
+   inboxBoxLogoHover.remove();
+   let inboxBoxLogoSelect = document.createElement("img");
+      inboxBoxLogoSelect.setAttribute('src' , '../slike/InboxSelected.PNG');
+      inboxBoxLogoSelect.className = "InboxBoxLogo";
+      InboxBox.prepend(inboxBoxLogoSelect);
+   
+      for (i=1 ; i<=19 ; i++) {
+         let mail = document.createElement("div");
+         mail.className = "mail";
+         emailBox.append(mail);
+      
+         if (mail) {
+            let mailLeftCheck1 = document.createElement("img");
+            mailLeftCheck1.setAttribute('src' , '../slike/FavoriteMail2.PNG');
+            mailLeftCheck1.className = "mailLeftCheck1";
+            mail.append(mailLeftCheck1);
+      
+            let mailLeftCheck2 = document.createElement("img");
+            mailLeftCheck2.setAttribute('src' , '../slike/FavoriteMail.PNG');
+            mailLeftCheck2.className = "mailLeftCheck2";
+            mail.append(mailLeftCheck2);
+      
+            let mailName = document.createElement("div");
+            mailName.className = "mailName";
+            mailName.innerHTML = "ITAcademy";
+            mail.append(mailName);
+      
+            let mailInfo = document.createElement("div");
+            mailInfo.className = "mailInfo";
+            mailInfo.innerHTML = "BESPLATAN SEMINAR: „Upoznajte GIT – najpopularniji alat za verzioniranje koda” ";
+            mail.append(mailInfo);
+      
+            let mailInfo2 = document.createElement("div");
+            mailInfo2.className = "mailInfo2";
+            mailInfo2.innerHTML = "-Steknite nove vještine na besplatnom seminaru „Upoznajte GIT – najpopularniji alat za verzioniranje koda”";
+            mail.append(mailInfo2);
+      
+            let mailDate = document.createElement("div");
+            mailDate.className = "mailDate";
+            mailDate.innerHTML = "Dec 17";
+            mail.append(mailDate);
+         }
+      }
+}

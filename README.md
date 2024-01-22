@@ -1,3 +1,5 @@
+This is my fourth project, and it is probably my most ambitious and interesting one yet. I decided to make an entire website through CSS and javascript alone in order to gain a better understanding of the fundamentals of javascript.
+
 When I was thinking of ways to improve my JavaScript logic, I figured I would make a website using only JavaScript. However, I realized that writing element.style... every time would make my code hundreds of lines long, so I decided to use CSS to save some time. I got this idea while sitting in class and learning how to use JavaScript append and createElement functions, but I wasn't really understanding them. I was practicing JavaScript weeks before, but I couldn't catch up to everything we were learning, so I decided to do this big project to learn more.
  
 After finishing this project, which took me 3 days, I had the feeling after that I finally understood how JavaScript is supposed to be written. This was one of my best decisions to start doing because it really helped me understand how JavaScript works.
